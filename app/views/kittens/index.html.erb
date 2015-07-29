@@ -1,0 +1,11 @@
+<% @kittens.each do |kitten| %>
+	<h2><%= link_to kitten.name, kitten %></h2>
+	<ul>
+		<li>AGE: <%= kitten.age %></li>
+		<li>CUTENESS(Out of 5): <%= kitten.cuteness %></li>
+		<li>SOFTNESS(Out of 5): <%= kitten.softness %></li>
+	</ul>
+	<%= link_to 'Show', drink %>
+    <%= link_to 'Edit', edit_drink_path(drink) %>
+    <%= link_to 'Destroy', drink, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
