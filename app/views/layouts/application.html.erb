@@ -7,7 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+	<% flash.each do |name, msg| -%>
+		<%= content_tag :div, msg, class: name %>
+	<% end -%>
+	
+	<h4><%= link_to 'Create New Kitten', new_kitten_path %> </h4>
+	<h4><%= link_to 'View All Kittens', kittens_path %> </h4>
 <%= yield %>
 
 </body>

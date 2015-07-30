@@ -1,2 +1,4 @@
 <h1>Edit Kitten Form</h1>
 <%= render 'kittens/form' %>
+
+<%= link_to 'Destroy', @kitten, method: :delete, data: { confirm: 'Are you sure?' } %>
